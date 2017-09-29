@@ -58,21 +58,23 @@
         {{/if}}
 
         <div class="container-fluid module">
-            <div class="row">
+            <div class="columns">
                 {{#if module.declarations}}
-                <div class="col-sm-3">
+                <div class="column">
                     <h3>Declarations<a href="https://angular.io/api/core/NgModule#declarations" target="_blank" title="Official documentation about module declarations"><span class="fa fa-info-circle"></span></a></h3>
                     <ul class="list-group">
                         {{#each module.declarations}}
-                            <li class="list-group-item">
+                            {{#if type}}
+                            <li class="list-group-item">                             
                                 <a href="{{relativeURL ../depth 'modules'}}{{type}}s/{{name}}.html">{{name}}</a>
                             </li>
+                            {{/if}}
                         {{/each}}
                     </ul>
                 </div>
                 {{/if}}
                 {{#if module.providers}}
-                <div class="col-sm-3">
+                <div class="column">
                     <h3>Providers<a href="https://angular.io/api/core/NgModule#providers" target="_blank" title="Official documentation about module providers"><span class="fa fa-info-circle"></a></h3>
                     <ul class="list-group">
                         {{#each module.providers}}
@@ -84,7 +86,7 @@
                 </div>
                 {{/if}}
                 {{#if module.imports}}
-                <div class="col-sm-3">
+                <div class="column">
                     <h3>Imports<a href="https://angular.io/api/core/NgModule#imports" target="_blank" title="Official documentation about module imports"><span class="fa fa-info-circle"></a></h3>
                     <ul class="list-group">
                         {{#each module.imports}}
@@ -100,7 +102,7 @@
                 </div>
                 {{/if}}
                 {{#if module.exports}}
-                <div class="col-sm-3">
+                <div class="column">
                     <h3>Exports<a href="https://angular.io/api/core/NgModule#exports" target="_blank" title="Official documentation about module exports"><span class="fa fa-info-circle"></a></h3>
                     <ul class="list-group">
                         {{#each module.exports}}
@@ -116,13 +118,15 @@
                 </div>
                 {{/if}}
                 {{#if module.bootstrap}}
-                <div class="col-sm-3">
+                <div class="column">
                     <h3>Bootstrap<a href="https://angular.io/docs/ts/latest/api/core/index/NgModule-interface.html#!#bootstrap-anchor" target="_blank"><span class="fa fa-info-circle"></a></h3>
                     <ul class="list-group">
                         {{#each module.bootstrap}}
+                            {{#if type}}
                             <li class="list-group-item">
                                 <a href="{{relativeURL ../depth 'modules'}}{{type}}s/{{name}}.html" >{{name}}</a>
                             </li>
+                            {{/if}}
                         {{/each}}
                     </ul>
                 </div>

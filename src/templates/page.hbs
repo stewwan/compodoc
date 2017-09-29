@@ -1,144 +1,219 @@
 <!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{data.documentationMainName}}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html class="no-js" lang="en">
 
-        <link rel="icon" type="image/x-icon" href="{{relativeURL data.depth }}images/favicon.ico">
-	    <link rel="stylesheet" href="{{relativeURL data.depth }}styles/style.css">
-        {{#if data.theme}}
-            {{#compare data.theme "!==" 'gitbook'}}
-                 <link rel="stylesheet" href="{{relativeURL data.depth }}styles/{{data.theme}}.css">
-            {{/compare}}
-        {{/if}}
-    </head>
-    <body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{data.documentationMainName}}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Firetask is a well coded Ionic Firebase starter application with features out-of-box written on top of Angular 4+, Firebase, Ionic 3+ and more. The app implements nice features like lazy loaded routes, modularization, easy extendability, facebook login, google login, firebase auth, firebase storage, firebase realtime database, google admob, account management, firebase analytics, firebase crash reporting, firebase event tracking, offline support, realtime database, native cordova plugins, firebase security rules, social login and much more..">
+  <meta name="keywords" content="firebase chat, ionic chat, ionic login, ionic native login, ionic 3 typescript, ionic 3 tutorial, ionic start, facebook login ionic, cordova facebook login, google login ionic, cordova google login, firebase auth, firebase google login, firebase database rules, firebase auth android, ionic firebase push notification, firebase storage, ionic app example, firebase realtime database, firebase sdk, google admob, firebase account management, firebase analytics, firebase crash reporting, firebase event tracking, firebase offline support, realtime database, native cordova plugins, firebase security rules, firebase social login, firebase app, ionic2 app, ionic app, ionic firebase app, firebase ionic app, ionic social login, ionic auth, firebase auth, ionic realtime app">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta property="og:title" content="The missing well coded Ionic Firebase Full Application">
+  <meta property="og:description" content="Firetask is a well coded Ionic Firebase starter application with features out-of-box written on top of Angular 4+, Firebase, Ionic 3+ and more. The app implements nice features like lazy loaded routes, modularization, easy extendability, facebook login, google login, firebase auth, firebase storage, firebase realtime database, google admob, account management, firebase analytics, firebase crash reporting, firebase event tracking, offline support, realtime database, native cordova plugins, firebase security rules, social login and much more..">
+  <meta property="og:image" content="https://i.imgur.com/22H82ly.png">
+  <link rel="icon" type="image/x-icon" href="{{relativeURL data.depth }}images/favicon.ico">
+  <link rel="stylesheet" href="{{relativeURL data.depth }}styles/style.css"> {{#if data.theme}} {{#compare data.theme "!==" 'gitbook'}}
+  <link rel="stylesheet" href="{{relativeURL data.depth }}styles/{{data.theme}}.css"> {{/compare}} {{/if}}
+  <script>
+    (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)    
+}, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-85583908-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
 
-        <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="{{relativeURL data.depth }}" class="navbar-brand">{{data.documentationMainName}}</a>
-            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+      <img src="https://firebasestorage.googleapis.com/v0/b/firetask-b881c.appspot.com/o/assets%2Flogo-docs.svg?alt=media&token=807508fa-ed8d-42a1-beef-a5ece1bb5f20" alt="Firetask Docs" width="132" height="28">
+    </a>
+      <div class="navbar-item is-hidden-tablet">
+
+        <a class="button is-danger is-outlined number" href="https://codecanyon.net/item/firetask-ionic-2-and-firebase-3-full-demo-application/18223835">
+              <span class="icon">
+                <i class="fa fa-shopping-cart"></i>
+              </span>
+              <span>Buy Now</span>
+            </a>
+        <button type="button" class="btn btn-default btn-menu fa fa-bars is-hidden-desktop" id="btn-menu"></button>
+      </div>
+
+    </div>
+
+    <div id="" class="navbar-menu">
+      <div class="navbar-start">
+
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="control">
+              <a class="bd-tw-button button is-info is-outlined number" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://firetask.io"
+                target="_blank" href="https://twitter.com/intent/tweet?text=The missing well coded Ionic Firebase application. Check it out!&hashtags=ionic,angular,firebase&url=https://firetask.io&via=StewanPacheco">
+  <span class="icon">
+    <i class="fa fa-twitter"></i>
+  </span>
+  <span>
+    Tweet
+  </span>
+</a>
+
+            </p>
+            <p class="control">
+              <a class="button is-danger is-outlined number" href="https://codecanyon.net/item/firetask-ionic-2-and-firebase-3-full-demo-application/18223835">
+              <span class="icon">
+                <i class="fa fa-shopping-cart"></i>
+              </span>
+              <span>Buy Now</span>
+            </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </nav>
+
+  <div class="xs-menu menu" id="mobile-menu">
+    {{> search-input data }} {{> menu data }}
+  </div>
+
+  <div class="container-fluid main">
+    <div class="row main">
+      <div class="hidden-xs menu">
+        {{> menu data menu='normal' }}
+      </div>
+      <div class="content {{data.context}}">
+        <div class="content-data">
+
+          {{#compare data.context "===" 'getting-started'}} {{~> markdown data ~}} {{/compare}} {{#compare data.context "===" 'overview'}}
+          {{~> overview data ~}} {{/compare}} {{#compare data.context "===" 'modules'}} {{~> modules data ~}} {{/compare}}
+          {{#compare data.context "===" 'module'}} {{~> module data ~}} {{/compare}} {{#compare data.context "===" 'components'}}
+          {{~> components data ~}} {{/compare}} {{#compare data.context "===" 'component'}} {{~> component data ~}} {{/compare}}
+          {{#compare data.context "===" 'directives'}} {{~> directives data ~}} {{/compare}} {{#compare data.context "==="
+          'directive'}} {{~> directive data ~}} {{/compare}} {{#compare data.context "===" 'injectables'}} {{~> injectables
+          data ~}} {{/compare}} {{#compare data.context "===" 'injectable'}} {{~> injectable data ~}} {{/compare}} {{#compare
+          data.context "===" 'pipes'}} {{~> pipes data ~}} {{/compare}} {{#compare data.context "===" 'pipe'}} {{~> pipe
+          data ~}} {{/compare}} {{#compare data.context "===" 'classes'}} {{~> classes data ~}} {{/compare}} {{#compare data.context
+          "===" 'class'}} {{~> class data ~}} {{/compare}} {{#compare data.context "===" 'interface'}} {{~> interface data
+          ~}} {{/compare}} {{#compare data.context "===" 'routes'}} {{~> routes data ~}} {{/compare}} {{#compare data.context
+          "===" 'miscellaneous-functions'}} {{~> miscellaneous-functions data ~}} {{/compare}} {{#compare data.context "==="
+          'miscellaneous-variables'}} {{~> miscellaneous-variables data ~}} {{/compare}} {{#compare data.context "===" 'miscellaneous-typealiases'}}
+          {{~> miscellaneous-typealiases data ~}} {{/compare}} {{#compare data.context "===" 'miscellaneous-enumerations'}}
+          {{~> miscellaneous-enumerations data ~}} {{/compare}} {{#compare data.context "===" 'coverage'}} {{~> coverage-report
+          data ~}} {{/compare}} {{#compare data.context "===" 'additional-page'}} {{~> additional-page data ~}} {{/compare}}
+        </div>
+        {{~> search-results data ~}}
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer>
+  <div class="container">
+    <div class="columns">
+      <div class="column one-third">
+        <div>
+
+          <div class="columns sitemap">
+            <ul class="column is-one-quarter">
+              <li><a routerLink="https://firetask.io/">Home</a></li>
+              <li><a routerLink="https://firetask.io/products/firetask-app">About</a></li>
+            </ul>
+            <ul class="column is-one-quarter">
+                <li><a href="https://codecanyon.net/item/firetask-ionic-2-and-firebase-3-full-demo-application/reviews/18223835">Reviews</a></li>
+                <li><a routerLink="https://firetask.io/account">Download</a></li>
+              </ul>
+            <ul class="column is-one-quarter">
+              <li><a routerLink="https://firetask.io/policy/privacy">Privacy</a></li>
+              <li><a routerLink="https://firetask.io/policy/refund">Refund</a></li>
+            </ul>
+
+    
+            <ul class="column">
+              <li><a href="https://docs.firetask.io">Docs</a></li>
+              <li><a routerLink="https://firetask.io/contact">Contact</a></li>
+            </ul>
+          </div>
+          <br class="is-hidden-desktop" />
+          <strong xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Firetask</strong>          is a product by <a xmlns:cc="http://creativecommons.org/ns#" href="https://stewan.io" property="cc:attributionName"
+            rel="cc:attributionURL">Stewan.io</a>
+          <br />
+          <small class="rights">Angular, Ionic, Firebase, Google, Facebook, Apple and any other is a trademark of their respective owners.</small>
+
+
+
+          <div class="social">
+  <a href="https://github.com/stewwan"><i class="fa fa-github"></i></a>
+  <a href="https://twitch.tv/stewwan"><i class="fa fa-twitch"></i></a>
+  <a href="https://twitter.com/StewanPacheco"><i class="fa fa-twitter"></i></a>
+  <!-- <a href="/blog.rss" title="feed rss" class="is-hidden-mobile"><i class="fa fa-rss"></i></a> -->
+</div>
+
+
+
+        </div>
+      </div>
+
+      <div class="column tryout has-text-right-tablet has-text-centered-mobile">
+        <div class="store">
+          <a href="https://goo.gl/tqQjsp">
+                <img style="max-height: 55px;" class="android" alt="Firetask is available for iPhone and iPad on Apple Store" title="Firetask is available for iPhone and iPad on Apple Store" src="https://i.imgur.com/nFjo9jV.png" />
+            </a>
+          <a href="https://goo.gl/tqQjsp">
+                <img style="max-height: 44px;" class="android" alt="Firetask is available for Android on Google Play" title="Firetask is available for Android on Google
+        Play" src="https://i.imgur.com/X7wjqiD.png" />
+            </a>
         </div>
 
-        <div class="xs-menu menu" id="mobile-menu">
-            {{> search-input data }}
-            {{> menu data }}
-        </div>
+        <br />
+        <small class="extended">
+           If you plan to run Firetask on multiple projects<br />
+           consider purchasing an extended license
+          </small>
 
-        <div class="container-fluid main">
-           <div class="row main">
-               <div class="hidden-xs menu">
-                   {{> menu data menu='normal' }}
-               </div>
-               <div class="content {{data.context}}">
-                   <div class="content-data">
+        <small class="extended" style="margin: 22px -22px;">
+          <a routerLink="https://firetask.io/contact?s=bug" title="Found a bug?" mdTooltipPosition="left"><i class="fa fa-bug" aria-hidden="true"></i></a>  
+          </small>
 
-                   {{#compare data.context "===" 'getting-started'}}
-                        {{~> markdown data ~}}
-                   {{/compare}}
+      </div>
+    </div>
 
-                   {{#compare data.context "===" 'overview'}}
-                        {{~> overview data ~}}
-                   {{/compare}}
 
-                   {{#compare data.context "===" 'modules'}}
-                        {{~> modules data ~}}
-                   {{/compare}}
-                   {{#compare data.context "===" 'module'}}
-                        {{~> module data ~}}
-                   {{/compare}}
+  </div>
 
-                   {{#compare data.context "===" 'components'}}
-                        {{~> components data ~}}
-                   {{/compare}}
-                   {{#compare data.context "===" 'component'}}
-                        {{~> component data ~}}
-                   {{/compare}}
+</footer>
 
-                   {{#compare data.context "===" 'directives'}}
-                        {{~> directives data ~}}
-                   {{/compare}}
-                   {{#compare data.context "===" 'directive'}}
-                        {{~> directive data ~}}
-                   {{/compare}}
 
-                   {{#compare data.context "===" 'injectables'}}
-                        {{~> injectables data ~}}
-                   {{/compare}}
-                   {{#compare data.context "===" 'injectable'}}
-                        {{~> injectable data ~}}
-                   {{/compare}}
+  <script src="{{relativeURL data.depth }}js/libs/bootstrap-native.js"></script>
+  <script src="{{relativeURL data.depth }}js/libs/es6-shim.min.js"></script>
+  <script src="{{relativeURL data.depth }}js/libs/EventDispatcher.js"></script>
+  <script src="{{relativeURL data.depth }}js/libs/promise.min.js"></script>
+  <script src="{{relativeURL data.depth }}js/libs/zepto.min.js"></script>
+  <script src="{{relativeURL data.depth }}js/compodoc.js"></script>
 
-                   {{#compare data.context "===" 'pipes'}}
-                        {{~> pipes data ~}}
-                   {{/compare}}
-                   {{#compare data.context "===" 'pipe'}}
-                        {{~> pipe data ~}}
-                   {{/compare}}
+  <script>
+    var COMPODOC_CURRENT_PAGE_DEPTH = {{data.depth }};
+  </script>
 
-                   {{#compare data.context "===" 'classes'}}
-                        {{~> classes data ~}}
-                   {{/compare}}
-                   {{#compare data.context "===" 'class'}}
-                        {{~> class data ~}}
-                   {{/compare}}
-
-                   {{#compare data.context "===" 'interface'}}
-                        {{~> interface data ~}}
-                   {{/compare}}
-
-                   {{#compare data.context "===" 'routes'}}
-                        {{~> routes data ~}}
-                   {{/compare}}
-
-                   {{#compare data.context "===" 'miscellaneous-functions'}}
-                        {{~> miscellaneous-functions data ~}}
-                   {{/compare}}
-                   {{#compare data.context "===" 'miscellaneous-variables'}}
-                        {{~> miscellaneous-variables data ~}}
-                   {{/compare}}
-                   {{#compare data.context "===" 'miscellaneous-typealiases'}}
-                        {{~> miscellaneous-typealiases data ~}}
-                   {{/compare}}
-                   {{#compare data.context "===" 'miscellaneous-enumerations'}}
-                        {{~> miscellaneous-enumerations data ~}}
-                   {{/compare}}
-
-                   {{#compare data.context "===" 'coverage'}}
-                        {{~> coverage-report data ~}}
-                   {{/compare}}
-
-                   {{#compare data.context "===" 'additional-page'}}
-                        {{~> additional-page data ~}}
-                   {{/compare}}
-                   </div>
-                   {{~> search-results data ~}}
-               </div>
-           </div>
-       </div>
-
-       <script src="{{relativeURL data.depth }}js/libs/bootstrap-native.js"></script>
-
-       <script src="{{relativeURL data.depth }}js/libs/es6-shim.min.js"></script>
-       <script src="{{relativeURL data.depth }}js/libs/EventDispatcher.js"></script>
-       <script src="{{relativeURL data.depth }}js/libs/promise.min.js"></script>
-       <script src="{{relativeURL data.depth }}js/libs/zepto.min.js"></script>
-
-       <script src="{{relativeURL data.depth }}js/compodoc.js"></script>
-
-       <script>var COMPODOC_CURRENT_PAGE_DEPTH = {{data.depth}};</script>
-
-       <script src="{{relativeURL data.depth }}js/search/search.js"></script>
-       <script src="{{relativeURL data.depth }}js/search/lunr.min.js"></script>
-       <script src="{{relativeURL data.depth }}js/search/search-lunr.js"></script>
-
-       <script src="{{relativeURL data.depth }}js/tabs.js"></script>
-       <script src="{{relativeURL data.depth }}js/menu.js"></script>
-       <script src="{{relativeURL data.depth }}js/libs/prism.js"></script>
-       <script src="{{relativeURL data.depth }}js/sourceCode.js"></script>
-       <script src="{{relativeURL data.depth }}js/search/search_index.js"></script>
-
-    </body>
+  <script src="{{relativeURL data.depth }}js/search/search.js"></script>
+  <script src="{{relativeURL data.depth }}js/search/lunr.min.js"></script>
+  <script src="{{relativeURL data.depth }}js/search/search-lunr.js"></script>
+  <script src="{{relativeURL data.depth }}js/tabs.js"></script>
+  <script src="{{relativeURL data.depth }}js/menu.js"></script>
+  <script src="{{relativeURL data.depth }}js/libs/prism.js"></script>
+  <script src="{{relativeURL data.depth }}js/sourceCode.js"></script>
+  <script src="{{relativeURL data.depth }}js/search/search_index.js"></script>
+</body>
 </html>

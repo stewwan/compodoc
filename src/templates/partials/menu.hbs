@@ -33,6 +33,8 @@
                         <a href="{{relativeURL depth pageType 'root'}}"
                             {{#compare name "===" 'overview' }} class="active" {{/compare}}
                             {{#compare name "===" 'index' }} class="active" {{/compare}}
+                            {{#compare name "===" 'changelog' }} class="active" {{/compare}}
+                            {{#compare name "===" 'license' }} class="active" {{/compare}}
                             >
                             <span class="fa fa-th"></span>Overview
                         </a>
@@ -41,7 +43,7 @@
                 {{#each markdowns}}
                     <li class="link">
                         {{#compare name "!==" 'readme'}}
-                        <a href="{{relativeURL depth pageType 'root'}}{{name}}.html"
+                        <a href="{{relativeURL ../depth pageType 'root'}}{{name}}.html"
                         {{else}}
                         <a href="{{relativeURL depth pageType 'root'}}index.html"
                         {{/compare}}
@@ -344,5 +346,20 @@
         {{/unless}}
 
     </ul>
+
+             {{!-- <div class="columns stores has-text-centered">
+                 <div class="column">
+              <a href="">
+            <img class="sepia" src="https://firebasestorage.googleapis.com/v0/b/firetask-b881c.appspot.com/o/assets%2Fgoogleplay.png?alt=media&token=b1ba6f1d-8a95-44cc-9742-d91cf225ac49" />
+            </a>
+          </div>
+          <div class="column">
+   
+              <a href="">
+            <img class="sepia" src="https://firebasestorage.googleapis.com/v0/b/firetask-b881c.appspot.com/o/assets%2Fapplestore.png?alt=media&token=3b633fa8-2068-43bf-8f3f-ec0cf577907a" />
+            </a>
+         </div>
+         
+          </div> --}}
 
 </nav>

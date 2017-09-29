@@ -1210,6 +1210,7 @@ var HtmlEngineHelpers = (function () {
                                 tag.comment = jsdocTags[i].comment.replace(/<caption>/g, '<b><i>').replace(/\/caption>/g, '/b></i>');
                             }
                             else {
+                                // console.log(jsdocTags[i].comment)
                                 tag.comment = "<pre class=\"line-numbers\"><code class=\"language-" + type + "\">" + htmlEntities(cleanTag(jsdocTags[i].comment)) + "</code></pre>";
                             }
                         }
